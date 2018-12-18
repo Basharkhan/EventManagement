@@ -1,0 +1,10 @@
+<form #f="ngForm">
+  <div *ngFor="let student of students">
+    <!-- <div *ngFor="let subEvent of event.subEvents"> -->
+      <input type="checkbox" 
+      [ngModelOptions]="{standalone: true}"
+      [(ngModel)]="student.selected"/> {{student.name}}
+    </div>
+  <!-- </div> -->
+    <button (click)="getSelectedCategories()">Get selected categories</button>
+</form>

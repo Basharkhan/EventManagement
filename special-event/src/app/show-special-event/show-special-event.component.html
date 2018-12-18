@@ -1,0 +1,53 @@
+<div class="container">
+  <div *ngFor="let event of specialEvents">
+    <div class="form-group">           
+      <p class="text-center">{{event.eventName}}</p>
+    </div>
+    <div class="form-group">
+      <label>Location</label>
+      {{event.eventAddress}}
+    </div>
+    <div class="form-group">
+      <label>Description</label>
+      {{event.eventDescription}}
+    </div>
+    <div class="form-group">
+      <label>Organizer</label>
+      {{event.organizerName}}
+    </div>
+    <div>
+      {{event.eventDate}}
+    </div>
+    <div>
+      {{event.country}}
+    </div>
+    <div>
+      {{event.category}}
+    </div>
+
+    
+    <div>
+      <table class="table table-striped table-dark">
+        <thead>
+          <tr>
+            <th>Event Name</th>
+            <th>Start Time</th>
+            <th>End Time</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let subEvent of event.subEvents">
+            <td>{{subEvent.name}}</td>
+            <td>{{subEvent.startTime}}</td>
+            <td>{{subEvent.endTime}}</td>
+            <input type="checkbox"
+            [ngModelOptions]="{standalone: true}"
+            [(ngModel)]="subEvent.selected"/>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
+  </div>
+  <button class="btn btn-primary" type="button" (click)="getSelectedCategories()">Selected Item</button>
+</div>

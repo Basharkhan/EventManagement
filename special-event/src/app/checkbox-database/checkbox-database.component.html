@@ -1,0 +1,12 @@
+<div class="container">
+  <form #f="ngForm">
+    <div *ngFor="let event of specialEvent">
+      <div *ngFor="let subEvent of event.subEvents">
+        <input type="checkbox"
+        [ngModelOptions]="{standalone: true}"
+        [(ngModel)]="subEvent.selected"/> {{subEvent.name}} {{subEvent.startTime}} {{subEvent.endTime}}
+      </div>
+    </div>
+      <button (click)="getSelectedCategories()">Get selected categories</button>
+  </form>
+</div>
