@@ -1,0 +1,39 @@
+
+
+  .form3 {
+      position: absolute;
+      bottom: 140px;
+      left: 500px;
+      border: 7px solid gray; 
+      padding: 10px;
+      color: #B8B8B8;
+      
+  }
+  .form-control {
+      width: 400px;
+      height: 28px;
+      background: #383838;
+      border: 1px  gray; 
+      border-radius: 0px;
+  }
+
+
+  button {
+      border-radius: 0px;
+      height: 39px;
+      position: relative;
+      left: 120px;
+      
+  }
+  ::placeholder {
+    color: #909090;
+}
+
+h2 {
+    position: relative;
+    left: 75px;
+    color: rgb(207, 201, 201);
+}
+
+
+  
